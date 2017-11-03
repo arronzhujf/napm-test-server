@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Test for AJAX!</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../static/js/testAJAX.js"></script>
+    <style type="text/css">
+        .comments {
+            width: 100%;
+            /*自动适应父布局宽度*/
+            overflow: auto;
+            word-break: break-all;
+        }
+    </style>
+    <script>
+        var index = 1;
+    </script>
+</head>
+
+<body>
+    <h1>Test for AJAX!</h1>
+    <p>点击下面的按钮发送AJAX</p>
+    <form>
+        <button style="font-size:25px" type="button" onclick="sendTestAJAXAsync()">Async AJAX!</button>
+        <button style="font-size:25px" type="button" onclick="sendTestAJAXSync(index)">Sync AJAX!</button>
+    </form>
+    <div style="background-color:powderblue;">
+        <textarea class="comments" rows=30 cols=27 onpropertychange="this.style.posHeight=this.scrollHeight ">
+        </textarea>
+    </div>
+</body>
+
+</html>
