@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Test for AJAX!</title>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../static/js/testAJAX.js"></script>
+    <script src="../static/js/require.js" defer async="true" data-main="../static/js/testAJAX"></script>
     <style type="text/css">
         .comments {
             width: 100%;
@@ -24,8 +24,8 @@
     <h1>Test for AJAX!</h1>
     <p>点击下面的按钮发送AJAX</p>
     <form>
-        <button style="font-size:25px" type="button" onclick="sendTestAJAXAsync()">Async AJAX!</button>
-        <button style="font-size:25px" type="button" onclick="sendTestAJAXSync(index)">Sync AJAX!</button>
+        <button id="async" style="font-size:25px" type="button">Async AJAX!</button>
+        <button id="sync" style="font-size:25px" type="button">Sync AJAX!</button>
     </form>
     <div style="background-color:powderblue;">
         <textarea class="comments" rows=30 cols=27 onpropertychange="this.style.posHeight=this.scrollHeight ">
