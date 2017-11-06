@@ -23,12 +23,12 @@ function sendAJAX(isAsync, param) {
     }).done(function (data) {
         let content = $('textarea').text();
         $('textarea').text(content + "\n" + JSON.stringify(data));
-        let url = "AZBridge://ajaxsuccess?data="+JSON.stringify(data)
+        let url = "MAMBridge://ajaxsuccess?data="+JSON.stringify(data)
         window.location.href = url;
     }).fail(function (data) {
         let content = $('textarea').text();
         $('textarea').text(content + "\n" + "error" + JSON.stringify(data));
-        let url = "AZBridge://ajaxsuccess";
+        let url = "MAMBridge://ajaxsuccess";
         window.location.href = url;
     });
 }
